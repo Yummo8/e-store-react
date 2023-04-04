@@ -1,0 +1,38 @@
+.taglines {
+  margin-top: 100px;
+  padding: 45px 55px;
+  background-color: $white;
+
+  &-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+
+    &__item {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 0 16px;
+
+      & .tagline {
+        &__icon {
+          width: 35px;
+          height: 35px;
+        }
+
+        &__text {
+          &-prime {
+            @include font-params(18, 24, 500);
+            text-transform: uppercase;
+          }
+
+          &-secondary {
+            @include font-params(16, 24);
+            color: $primary-gray;
+          }
+        }
+      }
+    }
+  }
+}

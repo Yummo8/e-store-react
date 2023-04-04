@@ -1,0 +1,71 @@
+.total-order-info {
+  padding: 40px 30px 45px;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 46%;
+  background-color: $white;
+
+  &__title {
+    &-text {
+      @include font-params(20, 23);
+    }
+  }
+
+  & .order__top {
+    margin-top: 40px;
+    padding-bottom: 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 22px 0;
+    border-bottom: 1px solid $primary-gray;
+
+    & .order-cost,
+    & .order-delivery,
+    & .order-discount,
+    & .order-promocode {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      &__title,
+      &__text {
+        @include font-params(16, 22);
+      }
+    }
+  }
+
+  & .order__bottom {
+    margin-top: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & .total-price {
+      &__title {
+        @include font-params(20, 30);
+        color: $tertiary-gray;
+      }
+
+      &__price {
+        @include font-params(24, 36, 500);
+        color: $tertiary-gray;
+      }
+    }
+  }
+
+  & .order-buy__button {
+    margin-top: 40px;
+    padding: 8px 22px !important;
+    align-self: flex-end;
+    background-color: $secondary-blue;
+
+    &:hover {
+      background-color: $primary-blue-dark;
+    }
+
+    &-text {
+      font-family: $font;
+      @include font-params(15, 26, 500);
+    }
+  }
+}

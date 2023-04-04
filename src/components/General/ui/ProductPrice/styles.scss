@@ -1,0 +1,17 @@
+.product__price {
+  display: flex;
+  align-items: center;
+
+  &-old {
+    color: $primary-gray;
+    text-decoration: line-through;
+  }
+
+  &-new {
+    color: $primary-red;
+  }
+
+  &-current {
+    color: $secondary-blue;
+  }
+}

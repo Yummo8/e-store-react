@@ -1,0 +1,23 @@
+.section-title {
+  margin-top: 100px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 0 25px;
+
+  &__text {
+    @include font-params(30, 45);
+  }
+
+  &__link {
+    & .section-title__button {
+      padding: 8px 20px !important;
+
+      &-text {
+        font-family: $font;
+        @include font-params(15, 26, 500);
+        color: $secondary-blue;
+      }
+    }
+  }
+}

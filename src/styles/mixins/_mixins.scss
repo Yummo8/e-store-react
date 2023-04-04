@@ -1,0 +1,53 @@
+@mixin font-params($size, $heigth, $weight: 400) {
+  font-weight: $weight;
+  font-size: $size + px;
+  line-height: $heigth + px;
+}
+
+@mixin opacity-mask($direction, $from, $to) {
+  mask-image: linear-gradient(
+    var(--mask-direction, to $direction),
+    hsl(0 0% 0% / 0),
+    hsl(0 0% 0% / 1) $from,
+    hsl(0 0% 0% / 1) $to,
+    hsl(0 0% 0% / 0)
+  );
+
+  -webkit-mask-image: linear-gradient(
+    var(--mask-direction, to $direction),
+    hsl(0 0% 0% / 0),
+    hsl(0 0% 0% / 1) $from,
+    hsl(0 0% 0% / 1) $to,
+    hsl(0 0% 0% / 0)
+  );
+}
+
+@mixin menu-scrollbar {
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: linear-gradient(
+      180deg,
+      rgba(0, 87, 184, 1) 40%,
+      rgba(255, 215, 0, 1) 70%
+    );
+    border-radius: 5px;
+  }
+}
+
+@mixin scrollbar {
+  &::-webkit-scrollbar {
+    width: 7px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: linear-gradient(
+      180deg,
+      rgba(0, 87, 184, 1) 40%,
+      rgba(255, 215, 0, 1) 70%
+    );
+    border-radius: 7px;
+  }
+}

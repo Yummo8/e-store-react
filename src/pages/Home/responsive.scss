@@ -1,0 +1,431 @@
+@media (max-width: 1660px) {
+  .home__wrapper {
+    & .sale {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 1645px) {
+  .home__wrapper {
+    & .promotions {
+      & .promotions-list {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 30px 22px;
+      }
+    }
+
+    & .blogs {
+      & .blogs-list {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 30px 22px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1260px) {
+  .home__wrapper {
+    & .categories {
+      &-list {
+        &__product {
+          & .item__top {
+            & .item__action {
+              width: 45px;
+              height: 45px;
+
+              & span {
+                width: 42px;
+                height: 42px;
+              }
+            }
+
+            & .item__link {
+              justify-content: center;
+
+              & .product__img {
+                width: 90%;
+                height: 250px;
+              }
+            }
+          }
+
+          & .item__bottom {
+            padding: 17px 25px 0;
+
+            & .product {
+              &__title,
+              &__price-old,
+              &__price-current,
+              &__price-new {
+                @include font-params(16, 24, 500);
+              }
+
+              &__price-old {
+                margin-right: 5px;
+              }
+            }
+
+            & .rating {
+              & .stars {
+                svg {
+                  width: 17px;
+                  height: 17px;
+                }
+              }
+
+              & .reviews {
+                @include font-params(12, 18, 500);
+              }
+            }
+
+            & .add-to-cart__button {
+              padding: 8px 14px;
+
+              &-icon {
+                width: 18px;
+                height: 18px;
+
+                svg {
+                  width: 18px;
+                  height: 18px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 834px) and (max-width: 1250px), (max-width: 520px) {
+  .home__wrapper {
+    & .categories {
+      &-list {
+        &__product {
+          & .item__bottom {
+            height: 150px;
+
+            & .product__price {
+              flex-direction: column;
+              align-items: flex-start;
+
+              &-old {
+                margin: 0;
+              }
+            }
+
+            & .add-to-cart__button {
+              right: 15px;
+              bottom: 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 834px) {
+  .home__wrapper {
+    margin-top: 385px;
+
+    & .section-title {
+      margin-top: 50px;
+
+      &__text {
+        @include font-params(20, 30);
+      }
+
+      &__link {
+        & .section-title__button {
+          &-text {
+            @include font-params(14, 24, 500);
+          }
+        }
+      }
+    }
+
+    & .brands {
+      display: none;
+    }
+
+    & .categories {
+      & .section-title {
+        &:first-child {
+          margin-top: 0;
+        }
+      }
+
+      &-list {
+        & .slider__wrapper {
+          max-width: 100%;
+
+          & .slick-slide {
+            &:not(:last-child) {
+              border-right: 1px solid $secondary-gray;
+            }
+          }
+        }
+
+        &__product {
+          & .item__top {
+            & .item__state {
+              &-sale,
+              &-new {
+                padding: 1px 12px;
+                @include font-params(14, 21);
+              }
+            }
+          }
+        }
+      }
+    }
+
+    & .promotions {
+      & .promotions-list {
+        & .slider__wrapper {
+          max-width: 100%;
+        }
+
+        &__item {
+          margin-right: 20px;
+
+          & .item__top {
+            & .promotion__days {
+              &-amount {
+                @include font-params(35, 52);
+              }
+
+              &-text {
+                @include font-params(14, 16);
+              }
+            }
+          }
+
+          & .item__bottom {
+            & .promotion-terms {
+              flex-wrap: wrap;
+
+              &__text {
+                @include font-params(14, 20);
+              }
+
+              &__button {
+                padding: 8px 10px !important;
+
+                svg {
+                  width: 20px;
+                  height: 20px;
+                }
+
+                &-text {
+                  @include font-params(14, 24, 500);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    & .blogs {
+      & .blogs-list {
+        & .slider__wrapper {
+          max-width: 100%;
+        }
+
+        &__item {
+          margin-right: 17px;
+
+          & .item__bottom {
+            min-height: 235px;
+            padding: 17px 20px;
+
+            & .blog__title {
+              @include font-params(16, 24, 500);
+            }
+
+            & .blog__text,
+            & .blog__date {
+              @include font-params(14, 21);
+            }
+
+            & .blog__text {
+              margin-top: 17px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 786px) {
+  .home__wrapper {
+    & .promotions {
+      & .promotions-list {
+        &__item {
+          & .item__bottom {
+            padding: 10px 10px 11px;
+
+            & .promotion-terms {
+              flex-direction: column;
+              align-items: center;
+              gap: 10px 0;
+
+              &__text {
+                max-width: fit-content;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 520px) {
+  .home__wrapper {
+    & .categories {
+      &-list {
+        &__product {
+          & .item__bottom {
+            height: 140px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .home__wrapper {
+    margin-top: 300px;
+  }
+}
+
+@media (max-width: 428px) {
+  .home__wrapper {
+    margin-top: 170px;
+
+    & .section-title {
+      margin-top: 30px;
+    }
+
+    & .categories {
+      &-list {
+        &__product {
+          & .item__top {
+            .item__state {
+              &-sale,
+              &-new {
+                @include font-params(12, 18);
+              }
+            }
+            & .item__action {
+              width: 42px;
+              height: 42px;
+
+              & span {
+                width: 38px;
+                height: 38px;
+              }
+            }
+          }
+
+          & .item__bottom {
+            & .product {
+              &__price-old,
+              &__price-current,
+              &__price-new {
+                @include font-params(14, 21, 500);
+              }
+
+              &__title {
+                @include font-params(12, 18, 500);
+              }
+            }
+
+            & .rating {
+              & .stars {
+                svg {
+                  width: 14px;
+                  height: 14px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    & .promotions {
+      & .promotions-list {
+        &__item {
+          margin-right: 10px;
+
+          & .item__top {
+            & .promotion__days {
+              padding-left: 10px;
+
+              &-amount {
+                @include font-params(25, 38);
+              }
+
+              &-text {
+                @include font-params(12, 14);
+              }
+            }
+          }
+
+          & .item__bottom {
+            padding: 10px 15px 11px;
+
+            & .promotion-terms {
+              flex-wrap: wrap;
+
+              &__text {
+                @include font-params(12, 14);
+              }
+
+              &__button {
+                &-text {
+                  @include font-params(13, 22, 500);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    & .blogs {
+      & .blogs-list {
+        &__item {
+          margin-right: 10px;
+
+          & .item__bottom {
+            min-height: 100px;
+            padding: 10px;
+
+            & .blog__title {
+              @include font-params(12, 18, 500);
+            }
+
+            & .blog__date {
+              @include font-params(12, 18);
+            }
+
+            & .blog__text {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}

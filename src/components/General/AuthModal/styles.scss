@@ -1,0 +1,269 @@
+#modal {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  user-select: none;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.auth-modal {
+  & .auth-modal {
+    &__container {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    &__wrapper {
+      display: flex;
+      background-color: $white;
+
+      & .modal__img {
+        display: flex;
+        z-index: 100;
+
+        & img {
+          -webkit-user-drag: none;
+        }
+      }
+
+      & .modal__body {
+        width: 100%;
+        padding: 80px 60px 0;
+        overflow: hidden;
+        overflow-y: scroll;
+        @include menu-scrollbar;
+
+        & .modal__header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          &-logo {
+            display: flex;
+            align-items: center;
+            gap: 0 16px;
+
+            & .logo-text {
+              @include font-params(25, 38, 500);
+            }
+
+            & .logo-icon {
+              width: 24px;
+              height: 24px;
+            }
+          }
+
+          & .modal-close__button {
+            padding: 4px;
+            display: flex;
+            border-radius: 4px;
+            transition: $transition-02s;
+
+            &-icon {
+              width: 30px;
+              height: 30px;
+
+              svg {
+                width: 30px;
+                height: 30px;
+                transition: $transition-02s;
+              }
+            }
+
+            &:hover {
+              background-color: $secondary-blue-extra-light;
+              transition: $transition-02s;
+
+              svg {
+                color: $secondary-blue;
+                transition: $transition-02s;
+              }
+            }
+          }
+        }
+
+        & .modal-form {
+          margin-top: 170px;
+          display: flex;
+          flex-direction: column;
+
+          &__sign-up {
+            gap: 30px 0;
+          }
+
+          &__sign-in {
+            gap: 60px 0;
+          }
+
+          &__links {
+            display: flex;
+            align-items: center;
+            gap: 0 20px;
+
+            & .link__item {
+              position: relative;
+              color: $tertiary-gray;
+              transition: $transition-02s;
+
+              &-text {
+                @include font-params(20, 30, 500);
+              }
+
+              &::after,
+              &.active::after {
+                content: '';
+                width: 0%;
+                position: absolute;
+                left: 0;
+                bottom: -6px;
+                border-bottom: 1px solid $secondary-blue;
+              }
+
+              &.active {
+                color: $secondary-blue;
+
+                &::after {
+                  width: 100%;
+                }
+              }
+
+              &:hover {
+                color: $secondary-blue;
+                transition: $transition-02s;
+              }
+
+              &::after {
+                transition: $transition-02s;
+              }
+            }
+          }
+
+          &__fields {
+            width: 100%;
+
+            &.sign-up__fields {
+              & form {
+                & .form {
+                  gap: 20px 0;
+                  margin-bottom: 30px;
+                }
+              }
+            }
+
+            &.sign-in__fields {
+              & form {
+                & .form {
+                  gap: 40px 0;
+                  margin-bottom: 60px;
+                }
+              }
+            }
+
+            & form {
+              & .form {
+                display: flex;
+                flex-direction: column;
+
+                & .form-field {
+                  position: relative;
+
+                  & .MuiTextField-root {
+                    width: 100%;
+                  }
+
+                  & .react-tel-input {
+                    font-family: $font;
+
+                    &:focus-within {
+                      & .special-label {
+                        color: $secondary-blue;
+                      }
+                    }
+
+                    &.error {
+                      & .special-label {
+                        color: #d32f2f;
+                      }
+
+                      & .form-control {
+                        border-color: #d32f2f;
+
+                        &::placeholder {
+                          color: #d32f2f;
+                        }
+                      }
+                    }
+
+                    & .special-label {
+                      font-size: 0.75em;
+                      color: $primary-gray;
+                      transition: all 0.2s cubic-bezier(0, 0, 0.2, 1);
+                    }
+
+                    & .flag-dropdown {
+                      & .country-list {
+                        @include menu-scrollbar;
+                      }
+                    }
+
+                    & .form-control {
+                      width: 100%;
+                      max-height: 60px;
+                      border-color: $primary-gray;
+                      transition: none;
+                      font-family: $font;
+                      color: rgba(0, 0, 0, 0.87);
+                      background-color: transparent;
+
+                      &::placeholder {
+                        font-family: $font;
+                        font-size: 1rem;
+                        line-height: 1.4375em;
+                        color: $primary-gray;
+                      }
+
+                      &:focus {
+                        border-width: 2px;
+                        box-shadow: none;
+                      }
+                    }
+                  }
+
+                  & .error-text {
+                    position: absolute;
+                    color: #d32f2f;
+                    font-size: 10px;
+                    bottom: -17px;
+                    left: 15px;
+                  }
+                }
+              }
+            }
+          }
+
+          &__button {
+            width: 100%;
+            padding: 18px 0;
+            border-radius: 4px;
+            background-color: $secondary-blue;
+            transition: $transition-02s;
+
+            &:hover {
+              opacity: 0.8;
+              transition: $transition-02s;
+            }
+
+            &-text {
+              font-family: $font;
+              @include font-params(16, 24, 500);
+              color: $white;
+            }
+          }
+        }
+      }
+    }
+  }
+}

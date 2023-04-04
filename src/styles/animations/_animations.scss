@@ -1,0 +1,100 @@
+@keyframes animate-navbar {
+  0% {
+    overflow: hidden;
+    height: 0;
+    opacity: 0;
+  }
+
+  50% {
+    height: 600px;
+    opacity: 1;
+  }
+}
+
+@keyframes animate-navbar-rev {
+  0% {
+    height: 600px;
+    opacity: 1;
+  }
+
+  50% {
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+  }
+}
+
+@keyframes hide-scroll {
+  from,
+  to {
+    overflow: hidden;
+  }
+}
+
+@keyframes animate-brands {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX((calc(-100% - 116px)));
+  }
+}
+
+@keyframes loader-rotate {
+  0% {
+    transform: rotate(0deg) scale(0.8);
+  }
+
+  50% {
+    transform: rotate(360deg) scale(1.2);
+  }
+
+  100% {
+    transform: rotate(720deg) scale(0.8);
+  }
+}
+
+@keyframes loader-ball1 {
+  0% {
+    box-shadow: 30px 0 0 #ffd700;
+  }
+
+  50% {
+    margin-bottom: 0;
+    box-shadow: 0 0 0 #ffd700;
+    transform: translate(15px, 15px);
+  }
+
+  100% {
+    box-shadow: 30px 0 0 #ffd700;
+    margin-bottom: 10px;
+  }
+}
+
+@keyframes loader-ball2 {
+  0% {
+    box-shadow: 30px 0 0 #0057b8;
+  }
+
+  50% {
+    box-shadow: 0 0 0 #0057b8;
+    margin-top: -20px;
+    transform: translate(15px, 15px);
+  }
+
+  100% {
+    box-shadow: 30px 0 0 #0057b8;
+    margin-top: 0;
+  }
+}
+
+@keyframes auth-loader-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

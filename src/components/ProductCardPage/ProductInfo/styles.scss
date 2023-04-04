@@ -1,0 +1,140 @@
+.product-card__info {
+  flex-basis: 43%;
+
+  & .product {
+    &-title {
+      @include font-params(35, 52, 500);
+
+      &__bottom {
+        margin-top: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        & .product__price {
+          margin-right: 10px;
+
+          &-old,
+          &-current,
+          &-new {
+            @include font-params(25, 38, 500);
+          }
+
+          &-old {
+            margin-right: 15px;
+          }
+        }
+
+        & .rating {
+          margin-left: auto;
+          margin-right: 60px;
+
+          & .reviews {
+            margin-left: 9px;
+            @include font-params(18, 27);
+          }
+        }
+      }
+    }
+
+    &-details {
+      margin-top: 20px;
+
+      &__title {
+        padding-bottom: 10px;
+        border-bottom: 1px solid $black;
+
+        &-text {
+          @include font-params(18, 27);
+        }
+      }
+
+      &__list {
+        margin-top: 10px;
+
+        & ul {
+          display: flex;
+          flex-direction: column;
+        }
+
+        & .details-list__item {
+          &-text {
+            max-width: 610px;
+            @include font-params(18, 31);
+          }
+        }
+      }
+    }
+
+    &-color-palette {
+      margin-top: 32px;
+
+      &__title {
+        padding-bottom: 10px;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid $black;
+
+        &-text {
+          @include font-params(18, 27);
+        }
+      }
+
+      &__bottom {
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+
+        & .color-picker {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 10px 10px;
+
+          &__item {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid transparent;
+            border-radius: 50%;
+            transition: $transition-02s;
+
+            &:hover {
+              border-color: rgb(145, 145, 145);
+              transition: $transition-02s;
+            }
+
+            &.active {
+              border-color: $black;
+            }
+
+            &-color {
+              width: 26px;
+              height: 26px;
+              border-radius: 50%;
+            }
+          }
+        }
+
+        & .quantity-buttons {
+          gap: 0 30px;
+        }
+      }
+    }
+
+    &-add-to-cart__button {
+      margin-top: 70px;
+      width: 100%;
+      background-color: $secondary-blue;
+      color: $white;
+      padding: 8px 20px !important;
+
+      &-text {
+        font-family: $font;
+        @include font-params(15, 26, 500);
+      }
+    }
+  }
+}

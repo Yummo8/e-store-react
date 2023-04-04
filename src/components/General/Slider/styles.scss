@@ -1,0 +1,50 @@
+.slider__wrapper {
+  & .slider__button {
+    position: absolute;
+    top: 45%;
+    width: 35px;
+    height: 35px;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border: 1px solid $secondary-blue;
+    border-radius: 4px;
+    transition: all 0.2s ease-out;
+
+    &:active {
+      background-color: $secondary-blue;
+      transition: all 0.2s ease-in;
+
+      svg path {
+        fill: $white;
+      }
+    }
+
+    &.prev-btn {
+      left: -60px;
+      transform: rotate(180deg);
+    }
+
+    &.next-btn {
+      right: -55px;
+    }
+
+    &.slick-disabled {
+      border-color: $primary-gray;
+
+      svg path {
+        fill: $primary-gray;
+      }
+
+      &:active {
+        background-color: transparent;
+      }
+    }
+
+    &-icon {
+      width: 22px;
+      height: 24px;
+    }
+  }
+}

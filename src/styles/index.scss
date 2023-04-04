@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+@import './variables/variables.scss';
+@import './mixins/mixins.scss';
+@import './animations/animations.scss';
+
+@import './App.scss';
+@import '../pages/styles.scss';
+@import '../components/styles.scss';
+@import './responsive.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+body {
+  font-family: $font;
+  background-color: $body-bg;
+
+  @include scrollbar;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: $black;
+}
+
+button,
+input {
+  border: none;
+  background-color: transparent;
+}
+
+button {
+  cursor: pointer;
+  user-select: none;
+}

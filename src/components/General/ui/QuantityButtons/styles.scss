@@ -1,0 +1,48 @@
+.quantity-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__button {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid $secondary-blue;
+    border-radius: 4px;
+    transition: all 0.1s ease-in;
+
+    svg path {
+      stroke-width: 0;
+    }
+
+    &:active {
+      background-color: $secondary-blue;
+
+      svg path {
+        fill: $white;
+      }
+    }
+
+    &.disable {
+      border-color: $primary-gray;
+      background-color: transparent;
+      cursor: not-allowed;
+
+      svg path {
+        fill: $primary-gray;
+      }
+    }
+
+    &-icon {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  &__qty {
+    @include font-params(20, 30);
+    color: $tertiary-gray;
+  }
+}

@@ -1,0 +1,98 @@
+.categories {
+  &-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    &__product {
+      padding-top: 60px;
+      padding-bottom: 18px;
+      flex-basis: 25%;
+      position: relative;
+      background-color: $white;
+
+      &:not(:last-child) {
+        border-right: 1px solid $secondary-gray;
+      }
+
+      & .item__top {
+        padding-bottom: 22px;
+        display: flex;
+        justify-content: center;
+        border-bottom: 1px solid $secondary-gray;
+
+        & .item__state {
+          top: 14px;
+          left: 20px;
+        }
+
+        & .item__action {
+          position: absolute;
+          top: 12px;
+          right: 20px;
+        }
+
+        & .item__link {
+          display: flex;
+
+          & .product__img {
+            width: 100%;
+            height: 300px;
+            padding: 0 10px;
+            object-fit: scale-down;
+            user-select: none;
+          }
+        }
+      }
+
+      & .item__bottom {
+        min-height: 134px;
+        padding: 17px 40px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        & .rating {
+          margin-top: auto;
+
+          & .reviews {
+            margin-left: 7px;
+            @include font-params(14, 21, 500);
+          }
+        }
+
+        & .product {
+          &__title,
+          &__price-old,
+          &__price-current,
+          &__price-new {
+            @include font-params(18, 27, 500);
+          }
+
+          &__title {
+            max-height: 50px;
+            overflow: hidden;
+          }
+
+          &__price {
+            margin-top: 9px;
+
+            &-old {
+              margin-right: 12px;
+            }
+          }
+        }
+
+        & .add-to-cart__button {
+          bottom: 20px;
+          right: 20px;
+
+          &-icon {
+            width: 28px;
+            height: 28px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+@media (max-width: 834px) {
+  .breadcrumbs {
+    &__item {
+      display: none;
+
+      &.last-item {
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 0;
+
+        & .breadcrumbs__item-icon {
+          rotate: 180deg;
+        }
+      }
+
+      &-text {
+        &:last-child {
+          display: none;
+        }
+      }
+    }
+  }
+}

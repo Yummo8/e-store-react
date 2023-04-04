@@ -1,0 +1,36 @@
+.brands {
+  max-width: 1285px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+
+  &-list {
+    height: 168px;
+    padding: 0 70px;
+    display: flex;
+    border-radius: 4px;
+    background-color: $white;
+
+    & .marquee {
+      display: flex;
+      align-items: center;
+      gap: 0 116px;
+      overflow: hidden;
+      @include opacity-mask(right, 20%, 80%);
+
+      &__group {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0 116px;
+        animation: animate-brands 20s linear infinite;
+        animation-direction: reverse;
+
+        & .brands-list__item {
+          user-select: none;
+        }
+      }
+    }
+  }
+}

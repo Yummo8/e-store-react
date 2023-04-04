@@ -1,0 +1,55 @@
+.user-contact__section {
+  & .user-contact__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & .user-contact__title {
+      @include font-params(20, 23);
+    }
+
+    & .have-account {
+      display: flex;
+      align-items: center;
+      gap: 0 10px;
+
+      &__text {
+        @include font-params(16, 19);
+        color: $secondary-gray-dark;
+      }
+
+      &__link {
+        &-text {
+          @include font-params(16, 19);
+          color: $secondary-gray-dark;
+        }
+      }
+
+      &__link {
+        &-text {
+          position: relative;
+
+          &::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            left: 0;
+            bottom: -3px;
+            border-bottom: 1px solid $secondary-gray-dark;
+          }
+        }
+      }
+    }
+  }
+
+  & .user-contact__form {
+    margin-top: 30px;
+
+    & form {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 30px 0;
+    }
+  }
+}

@@ -1,0 +1,41 @@
+.product-card__wrapper {
+  max-width: 1600px;
+  margin: 0 auto;
+  margin-top: 30px;
+
+  & .product-card {
+    width: 100%;
+    margin-top: 20px;
+    padding: 50px 140px 140px 12px;
+    display: flex;
+    justify-content: space-between;
+    gap: 0 30px;
+    overflow: hidden;
+    background-color: $white;
+  }
+
+  & .section-title {
+    &__text {
+      color: $tertiary-gray;
+    }
+  }
+
+  & .reviews-section {
+    & .section-title {
+      &__text {
+        color: $black;
+      }
+    }
+  }
+
+  & .slider__wrapper {
+    padding: 30px 85px 40px;
+    background-color: $white;
+
+    & .slick-slide {
+      & .product-item {
+        margin-right: 28px;
+      }
+    }
+  }
+}

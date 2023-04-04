@@ -1,0 +1,124 @@
+@media (max-width: 1170px) {
+  .payment__wrapper {
+    & .order__payment {
+      flex-wrap: wrap;
+      gap: 30px 20px;
+
+      & .payment {
+        flex-basis: 100%;
+      }
+
+      & .total-order-info {
+        flex-basis: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 834px) {
+  .payment__wrapper {
+    & .section-title {
+      margin-top: 25px;
+    }
+
+    & .order__payment {
+      & .payment {
+        padding: 25px 35px 30px;
+
+        & .user-contact__section {
+          & .user-contact__top {
+            flex-direction: column-reverse;
+            align-items: flex-start;
+            gap: 20px 0;
+
+            & .user-contact__title {
+              @include font-params(18, 21);
+            }
+          }
+        }
+
+        & .payment-method__section {
+          & .payment-method__top {
+            & .payment-method__title {
+              @include font-params(18, 21);
+            }
+          }
+        }
+      }
+
+      & .total-order-info {
+        padding: 30px 30px 35px;
+
+        & .total-order-info__title {
+          &-text {
+            @include font-params(18, 21);
+          }
+        }
+
+        & .order__bottom {
+          & .total-price__price {
+            @include font-params(18, 27, 500);
+          }
+        }
+
+        & .order-buy__button {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 485px) {
+  .payment__wrapper {
+    & .order__payment {
+      & .payment {
+        & .user-contact__section {
+          & .user-contact__form {
+            & form {
+              flex-direction: column;
+              align-items: flex-start;
+
+              & .form-field {
+                width: 100%;
+              }
+            }
+          }
+        }
+
+        & .payment-method__section {
+          & .payment-method__form {
+            & form {
+              flex-direction: column;
+              align-items: flex-start;
+
+              & .form-field {
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 428px) {
+  .payment__wrapper {
+    & .section-title {
+      &__text {
+        @include font-params(20, 30);
+      }
+    }
+
+    & .order__payment {
+      & .payment {
+        padding: 20px 25px;
+      }
+
+      & .total-order-info {
+        padding: 30px 25px 35px;
+      }
+    }
+  }
+}

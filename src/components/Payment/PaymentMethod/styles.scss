@@ -1,0 +1,51 @@
+.payment-method__section {
+  margin-top: 60px;
+
+  & .payment-method__top {
+    & .payment-method {
+      &__title {
+        @include font-params(20, 23);
+      }
+
+      &__payments {
+        margin-top: 30px;
+        display: flex;
+        align-items: center;
+        gap: 0 23px;
+
+        & .payments__item {
+          width: 75px;
+          height: 45px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border: 1px solid $secondary-gray;
+          border-radius: 4px;
+          overflow: hidden;
+          transition: $transition-02s;
+
+          &.active {
+            border-color: $secondary-blue;
+            transition: $transition-02s;
+          }
+
+          &:hover {
+            border-color: $secondary-blue-light;
+            transition: $transition-02s;
+          }
+        }
+      }
+    }
+  }
+
+  & .payment-method__form {
+    margin-top: 40px;
+
+    & form {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 30px 0;
+    }
+  }
+}

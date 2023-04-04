@@ -1,0 +1,30 @@
+.MuiFormLabel-root,
+.MuiInputBase-root {
+  font-family: $font !important;
+}
+
+.MuiInputBase-root {
+  font-family: $font !important;
+
+  & .MuiOutlinedInput-notchedOutline {
+    border-color: $primary-gray !important;
+  }
+
+  &.Mui-error {
+    & .MuiOutlinedInput-notchedOutline {
+      border-color: #d32f2f !important;
+    }
+  }
+}
+
+.MuiFormLabel-root {
+  color: $primary-gray !important;
+
+  &.Mui-focused {
+    color: #1976d2 !important;
+  }
+
+  &.Mui-error {
+    color: #d32f2f !important;
+  }
+}

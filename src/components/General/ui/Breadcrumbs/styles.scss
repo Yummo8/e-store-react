@@ -1,0 +1,30 @@
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 0 5px;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 0 5px;
+    color: $primary-gray;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &-text {
+      @include font-params(16, 24);
+      color: $primary-gray;
+
+      &:last-child {
+        color: $black;
+      }
+    }
+
+    &-icon {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}

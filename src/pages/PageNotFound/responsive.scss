@@ -1,0 +1,15 @@
+@media (max-width: 540px) {
+  .not-found {
+    &__wrapper {
+      & .not-found-404 {
+        & h1 {
+          font-size: 162px;
+        }
+      }
+
+      & h2 {
+        font-size: 26px;
+      }
+    }
+  }
+}

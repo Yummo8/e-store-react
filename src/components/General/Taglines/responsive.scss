@@ -1,0 +1,59 @@
+@media (max-width: 1376px) {
+  .taglines {
+    &-list {
+      justify-content: center;
+    }
+  }
+}
+@media (max-width: 834px) {
+  .taglines {
+    margin-top: 50px;
+    padding: 45px 15px;
+
+    &-list {
+      &__item {
+        & .tagline {
+          &__icon {
+            width: 30px;
+            height: 30px;
+
+            svg {
+              width: 30px;
+              height: 30px;
+            }
+          }
+
+          &__text {
+            &-prime {
+              @include font-params(16, 20, 500);
+            }
+
+            &-secondary {
+              @include font-params(14, 20);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 428px) {
+  .taglines {
+    &-list {
+      &__item {
+        & .tagline {
+          &__icon {
+            width: 24px;
+            height: 24px;
+
+            svg {
+              width: 24px;
+              height: 24px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

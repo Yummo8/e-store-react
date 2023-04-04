@@ -1,0 +1,125 @@
+.cart-list {
+  padding: 60px 80px;
+  max-height: 540px;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 70%;
+  gap: 55px 0;
+  background-color: $white;
+
+  @include menu-scrollbar;
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &:not(:last-child) {
+      margin-bottom: 55px;
+      position: relative;
+
+      &::after {
+        content: '';
+        width: 100%;
+        position: absolute;
+        bottom: -55px;
+        left: 0;
+        border-bottom: 1px solid $secondary-gray;
+      }
+    }
+
+    & .item {
+      &__img {
+        width: 150px;
+        height: 150px;
+        object-fit: scale-down;
+      }
+
+      &__title {
+        flex-basis: 38%;
+
+        &-text {
+          @include font-params(20, 30, 500);
+        }
+      }
+    }
+
+    & .quantity-buttons {
+      gap: 0 20px;
+
+      &__button {
+        background-color: $secondary-blue;
+
+        svg path {
+          stroke-width: 0.8;
+        }
+
+        &:active {
+          background-color: $white;
+
+          svg path {
+            fill: $secondary-blue;
+            stroke-width: 0;
+          }
+        }
+
+        svg path {
+          fill: $white;
+          stroke: $white;
+        }
+
+        &.disable {
+          background-color: transparent;
+
+          svg path {
+            fill: $primary-gray;
+            stroke: $primary-gray;
+            stroke-width: 0;
+          }
+        }
+      }
+    }
+
+    & .product__price {
+      flex-direction: column;
+      align-items: flex-start;
+
+      &-new,
+      &-current {
+        @include font-params(25, 38, 500);
+        color: $black;
+      }
+
+      &-old {
+        @include font-params(18, 27, 500);
+      }
+    }
+
+    & .remove-from-cart__button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &-icon {
+        width: 24px;
+        height: 24px;
+
+        svg path {
+          transition: $transition-02s;
+        }
+      }
+
+      &:hover {
+        & .remove-from-cart__button {
+          &-icon {
+            svg path {
+              stroke: $primary-red;
+              transition: $transition-02s;
+            }
+          }
+        }
+      }
+    }
+  }
+}

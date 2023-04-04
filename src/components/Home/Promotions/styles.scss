@@ -1,0 +1,60 @@
+.promotions {
+  &-list {
+    display: flex;
+    justify-content: flex-start;
+    gap: 0 22px;
+
+    &__item {
+      border-radius: 4px 4px 0 0;
+      overflow: hidden;
+      background-color: $white;
+
+      & .item__top {
+        border-bottom: 1px solid $secondary-gray;
+
+        & .promotion__img {
+          width: 100%;
+        }
+
+        & .promotion__days {
+          padding-left: 14px;
+          display: flex;
+          align-items: center;
+          gap: 0 6px;
+
+          &-amount {
+            @include font-params(40, 60);
+          }
+
+          &-text {
+            @include font-params(16, 20);
+          }
+        }
+      }
+    }
+
+    & .item__bottom {
+      padding: 5px 3px 11px 18px;
+
+      & .promotion-terms {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &__text {
+          max-width: 177px;
+        }
+
+        &__button {
+          padding: 8px 20px !important;
+
+          &-text {
+            font-family: $font;
+            @include font-params(15, 26, 500);
+            color: $secondary-blue;
+          }
+        }
+      }
+    }
+  }
+}

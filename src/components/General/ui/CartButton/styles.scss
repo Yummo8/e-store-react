@@ -1,0 +1,40 @@
+.add-to-cart__button {
+  padding: 5px 15px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  background-color: $secondary-blue;
+  transition: $transition-02s;
+
+  &:active {
+    scale: 0.85;
+  }
+
+  &.in-cart {
+    background-color: $secondary-blue-extra-light;
+
+    svg path {
+      fill: $secondary-blue;
+    }
+  }
+
+  &:hover {
+    @media (min-width: 835px) {
+      background-color: #def2ff;
+      transition: $transition-02s;
+
+      svg path {
+        fill: $secondary-blue;
+        transition: $transition-02s;
+      }
+    }
+  }
+
+  &-icon {
+    svg path {
+      transition: $transition-02s;
+    }
+  }
+}

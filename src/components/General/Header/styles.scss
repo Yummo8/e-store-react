@@ -1,0 +1,167 @@
+.header {
+  width: 100%;
+  padding: 20px;
+  background-color: $white;
+
+  &__wrapper {
+    max-width: 1600px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+  }
+
+  & .menu__links {
+    display: none;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    z-index: 11;
+
+    &::before,
+    &::after {
+      content: '';
+      width: 18px;
+      height: 2px;
+      position: absolute;
+      background-color: $white;
+      transition: all 0.4s ease;
+    }
+
+    &::before {
+      top: 6px;
+    }
+
+    &::after {
+      bottom: 6px;
+    }
+
+    &-icon {
+      width: 18px;
+      height: 2px;
+      position: absolute;
+      background-color: $white;
+      transition: $transition-02s;
+    }
+
+    &.active {
+      &::before {
+        transform: rotate(45deg);
+        top: 11px;
+      }
+
+      &::after {
+        transform: rotate(-45deg);
+        bottom: 11px;
+      }
+
+      & .menu__links-icon {
+        opacity: 0;
+      }
+    }
+  }
+
+  &__logo,
+  &__phone {
+    display: flex;
+    align-items: center;
+
+    &-icon {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  &__phone {
+    margin-left: 125px;
+  }
+
+  &__logo-text {
+    margin-right: 4px;
+    @include font-params(25, 38, 500);
+  }
+
+  &__phone-text {
+    margin-left: 8px;
+    @include font-params(20, 30, 500);
+  }
+
+  &__search {
+    margin-left: auto;
+    padding: 5px 12px;
+    width: 236px;
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+    background-color: $secondary-gray-light;
+
+    &-icon {
+      width: 24px;
+      height: 24px;
+      opacity: 0.5;
+    }
+
+    &-input {
+      margin-left: 6px;
+      width: 100%;
+      height: 30px;
+      font-family: $font;
+      font-size: 18px;
+
+      &::placeholder {
+        @include font-params(20, 30);
+      }
+    }
+  }
+
+  &-links {
+    margin-left: 40px;
+    display: flex;
+    align-items: center;
+    gap: 0 29px;
+
+    &__item {
+      display: flex;
+      position: relative;
+
+      &-icon {
+        width: 35px;
+        height: 35px;
+
+        svg path {
+          transition: $transition-02s;
+        }
+      }
+
+      & .badge {
+        position: absolute;
+        top: -8px;
+        right: -8px;
+        min-width: 22px;
+        height: 22px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        background-color: $primary-red;
+
+        &-text {
+          @include font-params(14, 21);
+          color: $white;
+        }
+      }
+
+      &:hover {
+        @media (min-width: 835px) {
+          svg path {
+            fill: $primary-blue;
+            transition: $transition-02s;
+          }
+        }
+      }
+    }
+  }
+}

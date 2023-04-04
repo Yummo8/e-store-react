@@ -1,0 +1,29 @@
+.item__action {
+  width: 51px;
+  height: 51px;
+  border: 2px solid $primary-gray;
+  border-radius: 50%;
+  transition: all 0.2s ease-out;
+
+  & span {
+    width: 48px;
+    height: 48px;
+  }
+
+  & svg {
+    stroke: $primary-gray;
+    stroke-width: 2px;
+    transition: all 0.2s ease-out;
+  }
+
+  &.checked {
+    background-color: $primary-red;
+    border-color: $primary-red;
+    transition: all 0.2s ease-in;
+
+    & svg {
+      stroke: $white;
+      transition: all 0.2s ease-in;
+    }
+  }
+}

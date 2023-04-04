@@ -1,0 +1,39 @@
+.loader {
+  margin: 20vh auto 0;
+  height: 50px;
+  width: 50px;
+  animation: loader-rotate 1.5s infinite;
+
+  &::before,
+  &::after {
+    content: '';
+    display: block;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+  }
+
+  &::before {
+    margin-bottom: 10px;
+    background-color: #0057b8;
+    box-shadow: 30px 0 0 #ffd700;
+    animation: loader-ball1 1.5s infinite;
+  }
+
+  &::after {
+    background-color: #ffd700;
+    box-shadow: 30px 0 0 #0057b8;
+    animation: loader-ball2 1.5s infinite;
+  }
+}
+
+.auth-loader {
+  margin: 0 auto;
+  width: 24px;
+  height: 24px;
+  border: 3px solid rgba(255, 255, 255, 0.63);
+  border-top: 3px solid #fff;
+  border-left: 3px solid #fff;
+  border-radius: 50%;
+  animation: auth-loader-rotate 1s linear infinite;
+}

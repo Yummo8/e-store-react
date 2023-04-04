@@ -1,0 +1,94 @@
+@media (max-width: 1024px) {
+  .header {
+    &__phone {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 834px) {
+  .header {
+    padding: 15px 20px;
+    background-color: $primary-blue;
+    border-bottom: 1px solid $white;
+
+    &__wrapper {
+      max-width: 700px;
+      justify-content: space-between;
+    }
+
+    & .menu-links {
+      display: block;
+    }
+
+    &-logo__link {
+      margin-right: auto;
+      margin-left: 15px;
+    }
+
+    &__logo {
+      &-text {
+        @include font-params(22, 32, 500);
+        color: $white;
+      }
+
+      &-icon {
+        width: 21px;
+        height: 21px;
+
+        svg {
+          width: 21px;
+          height: 21px;
+
+          path {
+            stroke: $white;
+          }
+        }
+      }
+    }
+
+    &__search {
+      display: none;
+    }
+
+    &-links {
+      margin: 0;
+      gap: 0 15px;
+
+      &__item {
+        &-icon {
+          width: 24px;
+          height: 24px;
+
+          svg {
+            width: 24px;
+            height: 24px;
+
+            path {
+              fill: $white;
+            }
+          }
+        }
+
+        & .badge {
+          min-width: 15px;
+          height: 15px;
+          top: -6px;
+          right: -6px;
+
+          &-text {
+            @include font-params(10, 15);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 428px) {
+  .header {
+    &__wrapper {
+      max-width: 380px;
+    }
+  }
+}

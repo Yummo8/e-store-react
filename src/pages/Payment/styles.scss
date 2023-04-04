@@ -1,0 +1,39 @@
+.payment__wrapper {
+  max-width: 1600px;
+  margin: 0 auto;
+  margin-top: 30px;
+  padding-bottom: 70px;
+
+  & .section-title {
+    margin-top: 40px;
+  }
+
+  & .order__payment {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0 20px;
+
+    & .payment {
+      padding: 50px 35px 70px;
+      flex-basis: 53%;
+      background-color: $white;
+
+      & .form-field {
+        &.w {
+          &-100 {
+            flex-basis: 100%;
+          }
+
+          &-50 {
+            flex-basis: 49%;
+          }
+
+          &-30 {
+            flex-basis: 32%;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,57 @@
+.cart-order-info {
+  min-height: 270px;
+  padding: 40px 30px 45px;
+  flex-basis: 30%;
+  background-color: $white;
+
+  &__title {
+    &-text {
+      @include font-params(20, 23);
+    }
+  }
+
+  & .order__top {
+    margin-top: 15px;
+    padding-bottom: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid $secondary-gray;
+
+    & .order__items-count {
+      @include font-params(18, 21);
+    }
+
+    & .order__price-current {
+      @include font-params(18, 21, 500);
+    }
+  }
+
+  & .order__bottom {
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    & .total-price {
+      &__title {
+        &-text {
+          @include font-params(20, 30);
+          color: $tertiary-gray;
+        }
+      }
+
+      &__price {
+        & .order__price-old {
+          @include font-params(18, 27, 500);
+          text-decoration: line-through;
+          color: $primary-gray;
+        }
+
+        & .order__price-new {
+          @include font-params(25, 38, 500);
+        }
+      }
+    }
+  }
+}

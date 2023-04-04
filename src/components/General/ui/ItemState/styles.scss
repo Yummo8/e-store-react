@@ -1,0 +1,18 @@
+.item__state {
+  position: absolute;
+
+  &-sale,
+  &-new {
+    padding: 1px 14px;
+    @include font-params(16, 24);
+    color: $white;
+  }
+
+  &-sale {
+    background-color: $primary-red;
+  }
+
+  &-new {
+    background-color: $secondary-blue;
+  }
+}
